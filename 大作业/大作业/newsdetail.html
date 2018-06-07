@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+    
+    
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/> 
+    <link type="text/css" rel="stylesheet" href="css/style.css"  media="screen,projection"/>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+
+    
+    <script type="text/javascript">  	
+   		document.addEventListener('plusready', function(){
+   			//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+   		});		
+   		$( document ).ready(function(){
+   			$('.button-collapse').sideNav({
+			      menuWidth: 200, // Default is 240
+			      edge: 'left', // Choose the horizontal origin
+				  draggable: true // Choose whether you can drag to open on touch screens
+			    }
+			 );
+			$('.collapsible').collapsible();
+   			$('.parallax').parallax();
+			$('.scrollspy').scrollSpy();
+   			var windowWidth = $(window).width();
+		    if(windowWidth < 640){
+		       $('.slider').slider({
+	   				height:400,
+	   				indicators: false,
+	   				interval:6000,
+	   				transition:0
+   				});
+		    }
+		    if(windowWidth >= 640){
+		        $('.slider').slider({
+	   				height:950,
+	   				indicators: false,
+	   				interval:6000,
+	   				transition:800
+   				});
+		    }
+   		});
+   		
+   		$(function(){
+   			$('#searchbutton').click(function () {
+       			$('#searchbox').toggle(300);
+   			});
+   			$('#searchtext').blur(function () {
+       			$('#searchbox').hide(300);
+   			});
+   			//视频播放后隐藏
+   			var vid = document.getElementById("VidageVideo");
+		  	vid.onended = function() {
+			    $("#videodiv").hide();
+			};
+			$('.dropdown-button').dropdown({
+			  inDuration: 300,
+			  outDuration: 225,
+			  constrain_width: false, // Does not change width of dropdown to that of the activator
+			  hover: true, // Activate on hover
+			  gutter: 0, // Spacing from edge
+			  belowOrigin: false, // Displays dropdown below the button
+			  alignment: 'left' // Displays dropdown with edge aligned to the left of button
+			  }
+		    );	 
+   		});
+    </script>
+    
+    
+</head>
+<body>
+	<!--
+    	作者：renjianchao2015@163.com
+    	时间：2018-06-02
+    	描述：导航栏
+   -->
+    
+    <div class="scrollspy navbar-fixed" id="titlebar">
+		<nav class="black">
+		    <div class="nav-wrapper">
+		    	
+		      <a href="#!" class="brand-logo">
+		      	<img class="logo_png responsive-img hide-on-large-only" src="img/logo.png" />
+		      </a>
+		      <a href="#!" class="brand-logo2 hide-on-med-and-down">
+		      	<img class="logo_png2 responsive-img hide-on-med-and-down" src="img/logo.png" />
+		      	<span class="logotext light grey-text text-lighten-3">LAMBORGHINI</span>
+		      </a>
+		      <ul class="right hide-on-med-and-down menuitem">
+		        <li>
+					<a href="#" data-beloworigin="true" data-activates='dropdown1' class="dropdown-button waves-effect waves-light">车型</a>
+					<ul id='dropdown1' class='dropdown-content black'>
+						<li><a href="#!" class="white-text">一</a></li>
+						<li class="divider white"></li>
+						<li><a href="#!" class="white-text">二</a></li>
+						<li class="divider white"></li>
+						<li><a href="#!" class="white-text">三</a></li>
+					</ul>
+				</li>
+		        <li>
+					<a href="#" data-beloworigin="true" data-activates='dropdown2' class="dropdown-button waves-effect waves-light">体验</a>
+					<ul id='dropdown2' class='dropdown-content black'>
+						<li><a href="morenews.html" class="white-text">新闻</a></li>
+						<li class="divider white"></li>
+						<li><a href="#!" class="white-text">活动</a></li>
+						<li class="divider white"></li>
+						<li><a href="#!" class="white-text">博物馆</a></li>
+					</ul>
+				</li>
+		        <li><a href="#" class="waves-effect waves-light">服务</a></li>
+		        <li><a href="#" class="waves-effect waves-light">商店</a></li>
+		        <li ><a href="#">
+		        	<i class="material-icons waves-effect waves-light" id="searchbutton">search</i>
+		        </a></li>
+		      </ul>
+		      <a href="#" data-activates="mobile-demo" class="button-collapse waves-effect waves-light"><i class="material-icons">menu</i></a>
+		      
+			  <!--手机导航栏-->
+			  <ul class="side-nav collapsible menuitem black" id="mobile-demo" data-collapsible="accordion" >
+		      	<li><a href="#" class=""><br></a></li>
+				<li>
+				    <div class="collapsible-header white-text waves-effect waves-light">车型</div>
+				    <div class="collapsible-body black container">
+						<a class="white-text waves-effect waves-light">一</a>
+					</div>
+				</li>
+				<li>
+					<div class="collapsible-header white-text waves-effect waves-light">体验</div>
+					<div class="collapsible-body black container">
+						<a href="morenews.html" class="white-text waves-effect waves-light">新闻</a>
+						<a class="white-text waves-effect waves-light">活动</a>
+						<a class="white-text waves-effect waves-light">博物馆</a>
+					</div>
+				</li>
+				<li>
+					<div class="collapsible-header white-text waves-effect waves-light">服务</div>
+					<div class="collapsible-body black container">
+						<a class="white-text waves-effect waves-light">一</a>
+					</div>
+				</li>
+				<li>
+					<div class="collapsible-header white-text waves-effect waves-light">商店</div>
+					<div class="collapsible-body black container">
+						<a class="white-text waves-effect waves-light">一</a>
+					</div>
+				</li>
+		        <nav>
+				    <div class="nav-wrapper black ">
+				      <form>
+				        <div class="input-field">
+				          <input id="search" type="search" required autocomplete="off">
+				          <label class="label-icon" for="search"><i class="material-icons waves-effect waves-light">search</i></label>
+				          <i class="material-icons waves-effect waves-light" >close</i>
+				        </div>
+				      </form>
+				    </div>
+				</nav>
+		      </ul>
+		    </div>
+	    </nav>
+
+		<!--
+			作者：renjianchao2015@163.com
+			时间：2018-06-02
+			描述：网页下搜索框
+		-->
+		<div class="container-f" id="searchbox" style="display: none">
+			<div class="col s12">
+				<div class="card" >
+					<form method="get" action="#" class="card-content">
+						<div class="input-field">
+							<input id="searchtext" class="flow-text" value="search" type="search" required  name="q" autocomplete="off">
+							<i class="material-icons">search</i>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>	
+	</div>
+	<!--
+		作者：renjianchao2015@163.com
+		时间：2018-06-05
+		描述：路径导航
+	-->
+	<nav>
+		<div class="nav-wrapper black ">
+			<div class="col s12 container">
+				<a href="index.html" class="breadcrumb white-text">主页</a>
+				<a href="#!" class="breadcrumb white-text">体验</a>
+				<a href="morenews.html" class="breadcrumb white-text">新闻</a>
+				<a href="newsdetail.html" class="breadcrumb white-text">新闻内容</a>
+			</div>
+		</div>
+	</nav>
+	<!--
+		作者：renjianchao2015@163.com
+		时间：2018-06-05
+		描述：新闻内容
+	-->
+	<div class="newsback">
+		<div class="newsfront">
+			bbbbbbb
+		</div>
+	</div>
+	
+    <!--
+    	作者：renjianchao2015@163.com
+    	时间：2018-06-03
+    	描述：悬浮菜单
+    -->
+    <div class="fixed-action-btn click-to-toggle">
+	    <a class="waves-effect waves-light btn-floating btn-large lime darken-1">
+	      <i class="large material-icons">add</i>
+	    </a>
+	    <ul>
+	      <li><a class="waves-effect waves-light btn-floating lime darken-1"><i class="material-icons">share</i></a></li>
+	      <li><a href="#titlebar" class="waves-effect waves-light btn-floating lime darken-1"><i class="material-icons">publish</i></a></li>
+	    </ul>
+	</div>
+	
+    <!--
+    	作者：renjianchao2015@163.com
+    	时间：2018-06-03
+    	描述：页脚
+    -->
+    <footer class="page-footer black">
+        <div class="container ">
+            <div class="row">      
+              <div class="col l4 offset-l2 s12">	
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">链接 1</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">链接 2</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">链接 3</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">链接 4</a></li>
+                </ul>
+              </div>
+              <div class="col l6 s12">
+                <h6 class="white-text">© 2018 Copyright 兰博基尼汽车有限公司版权所有。</h6>
+                <p class="grey-text text-lighten-4">兰博基尼汽车有限公司是一家隶属奥迪集团的单一股东公司。保留所有权利。</p>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+              <a class="grey-text text-lighten-4 left" href="#!">联系我们</a>
+            </div>
+          </div>
+    </footer>    
+
+
+</body>
+</html>
