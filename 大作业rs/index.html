@@ -14,6 +14,7 @@
     <link href="css/mdb.min.css" rel="stylesheet">
     <!-- Your custom styles (optional) -->
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/lightbox.css" rel="stylesheet">
     <!-- SCRIPTS -->
 
 
@@ -350,7 +351,7 @@
 		<br>
         <div class="container">
             <div class="row">
-                <div class="col-sm-12 col-md-8">
+                <div class="col-12 col-md-8">
                     <div class="row">
                         <div class="col col-md-12">
 							<div class="view zoom">
@@ -363,7 +364,7 @@
                         <div class="container">
 							<br>
                             <div class="row">
-                                <div class="col-6 col-md-6">
+                                <div class="col-12 col-md-6">
                                     <div class="view zoom">
                                         <img class="img-fluid" src="img/news2.jpg" />
                                         <div class="mask flex-center">
@@ -371,7 +372,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-6 col-md-6">
+                                <div class="col-12 col-md-6">
                                     <div class="view zoom">
                                         <img class="img-fluid" src="img/news3.jpg" />
                                         <div class="mask flex-center">
@@ -384,7 +385,7 @@
                     </div>
                 </div>
 
-                <div class="col-sm-12 col-md-4" >
+                <div class="col-12 col-md-4" >
                     <div class="row">
                         <div class="container">
                             <div class="list-group dew">
@@ -457,6 +458,114 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <br>
+    </div>
+
+    <div id="activity" class="container">
+        <div class="flex-center">
+            <h1>活动</h1>
+        </div>
+        <hr width="20%">
+        <div class="row">
+            <div class="col-auto mr-auto">
+            </div>
+            <div class="col-auto">
+                <a target="_blank" href="" class="btn btn-warning btn-rounded btn-sm">查看更多活动 &gt;</a>
+            </div>
+        </div>
+        <br>
+        <div class="accordion " id="accordionExample">
+            <div class="card">
+                <div class="card-header white black-text waves-effect" id="headingOne">
+                    <p class="flex-center">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <h3>SUPER TROFEO EUROPE</h3>
+                            <h5 >6月23-24号</h5>
+                        </button>
+                    </p>
+                </div>
+
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body container">
+                        <img class="rounded mx-auto d-block img-fluid img-thumbnail hoverable" style="max-width: 80%" src="img/img1.jpg">
+                        <br>
+                        <h5 class="container">
+                            The Lamborghini Super Trofeo Europe 2018 returns to the Adriatic Coast after many years. The first race will be at night, making the event unforgettable.
+                        </h5>
+                        <div class="container">
+                            <a target="_blank" href="#!" class="btn btn-warning btn-rounded btn-sm
+                            float-right">查看详细信息&gt;</a>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header white black-text waves-effect" id="headingTwo">
+                    <p class="flex-center">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseOne">
+                            <h3>SUPER TROFEO EUROPE</h3>
+                            <h5 >6月23-24号</h5>
+                        </button>
+                    </p>
+                </div>
+
+                <div id="collapseTwo" class="collapse " aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body container">
+                        <img class="rounded mx-auto d-block img-fluid img-thumbnail hoverable" style="max-width: 80%" src="img/img1.jpg">
+                        <br>
+                        <h5 class="container">
+                            The Lamborghini Super Trofeo Europe 2018 returns to the Adriatic Coast after many years. The first race will be at night, making the event unforgettable.
+                        </h5>
+                        <div class="container">
+                            <a target="_blank" href="#!" class="btn btn-warning btn-rounded btn-sm
+                            float-right">查看详细信息&gt;</a>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header white black-text waves-effect" id="headingThree">
+                    <p class="flex-center">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseOne">
+                            <h3>SUPER TROFEO EUROPE</h3>
+                            <h5 >6月23-24号</h5>
+                        </button>
+                    </p>
+                </div>
+
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card-body container">
+                        <img class="rounded mx-auto d-block img-fluid img-thumbnail hoverable" style="max-width: 80%" src="img/img1.jpg">
+                        <br>
+                        <h5 class="container">
+                            The Lamborghini Super Trofeo Europe 2018 returns to the Adriatic Coast after many years. The first race will be at night, making the event unforgettable.
+                        </h5>
+                        <div class="container">
+                            <a target="_blank" href="#!" class="btn btn-warning btn-rounded btn-sm
+                            float-right">查看详细信息&gt;</a>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="car_show" class="container">
+        <a href="img/img1.jpg" data-lightbox="image-1" data-title="My caption"></a>
+        <div class="row no-margin">
+            <figure class="col-md-4">
+                <img class="img-fluid" src="img/img1.jpg">
+            </figure>
+            <figure class="col-md-4">
+                <img class="img-fluid" src="img/img1.jpg">
+            </figure>
+            <figure class="col-md-4">
+                <img class="img-fluid" src="img/img1.jpg">
+            </figure>
         </div>
     </div>
     <!--Main Layout-->
@@ -594,8 +703,14 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script src="js/lightbox.js"></script>
+
     <script>
+        // language=JQuery-CSS
         $('.carousel').carousel();
+        $('.carousel-indicators').carousel({
+            interval: 500
+        });
     </script>
 </body>
 
